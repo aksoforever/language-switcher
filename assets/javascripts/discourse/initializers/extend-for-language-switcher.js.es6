@@ -5,7 +5,7 @@ function initializePlugin(api) {
     console.log('the page has changed');
   });
   
-  api.decorateWidget('header-icons:before', function(helper) {
+  api.decorateWidget('header-icons:after', function(helper) {
     const currentUser = api.getCurrentUser(),
       headerState = helper.widget.parentWidget.state;
     let contents = [];
@@ -22,6 +22,6 @@ function initializePlugin(api) {
 export default {
   name: 'extend-for-language-switcher',
   initialize() {
-    withPluginApi('0.8', api => initializePlugin(api));
+    withPluginApi('0.8.7', initialize);
   }
 }
