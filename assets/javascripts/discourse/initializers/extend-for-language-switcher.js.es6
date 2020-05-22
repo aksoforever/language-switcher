@@ -22,6 +22,6 @@ function initializePlugin(api) {
 export default {
   name: 'extend-for-language-switcher',
   initialize() {
-    withPluginApi('0.1', api => initializePlugin(api));
+    withPluginApi('0.8', api => initializePlugin(api));
   }
 }
